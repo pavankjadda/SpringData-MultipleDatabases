@@ -47,7 +47,6 @@ public class ProjectJpaAutoConfiguration
 		em.setJpaVendorAdapter(vendorAdapter);
 		HashMap<String, Object> properties = new HashMap<>();
 		properties.put("hibernate.hbm2ddl.auto", "update");
-		properties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
 		em.setJpaPropertyMap(properties);
 
 		return em;
