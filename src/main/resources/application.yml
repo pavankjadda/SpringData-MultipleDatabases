@@ -1,0 +1,45 @@
+
+
+### Server information
+server:
+  port: 8080
+
+
+
+### Spring Properties
+spring:
+  application:
+    name: Demo
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+  #  MySql datasource Properties
+  datasource:
+    jdbcUrl: jdbc:mysql://localhost:3306/multiple_db_demo?serverTimezone=UTC
+    username: root
+    password: bcmc1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  #  h2 datasource Properties
+  second-datasource:
+    jdbcUrl: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+
+  # JPA properties
+  jpa:
+    generate-ddl: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        ddl-auto: update
+        show_sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+
+
+
