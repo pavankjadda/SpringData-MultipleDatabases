@@ -35,11 +35,5 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
-        ddl-auto: update
+        ddl-auto: create-drop
         show_sql: true
-    hibernate:
-      ddl-auto: create-drop
-
-
-
-
